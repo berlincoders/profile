@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MySpaceShip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body style="background-color: #F6F4EB;">
+  <%= render "shared/navbar" %>
+     <div class="d-flex justify-content-center align-items-center">
+      <div class="card text-center text-white my-5" style="background-color: #393E46; border-radius: 10px;">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <p class="notice" style="color: white;"><%= notice %></p>
+      <p class="alert" style="color: white;"><%= alert %></p>
+    </div>
+  </body>
+</html>
